@@ -3,6 +3,8 @@ from flask import render_template, request
 from datetime import datetime
 import os
 app = Flask(__name__)
+app.config['UPLOAD_FOLDER'] = 'tmp/'
+
 
 @app.route('/')
 def homepage():
@@ -22,8 +24,8 @@ def homepage():
 def upload_file():
     if request.method == 'POST':
       f = request.files['file']
-      f.save(f.filename)
-      if os.path.isfile(f.filename):
+      f.save(os.path.join(app.config['UPLOAD_FOLDER'],f.filename))
+      if os.path.exists(os.path.join(app.config['UPLOAD_FOLDER'], f.filename)):
          return 'file uploaded successfully'
       else:
           return 'file upload fail'    
