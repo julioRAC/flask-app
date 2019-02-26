@@ -23,6 +23,9 @@ def homepage():
 @app.route('/uploader', methods = ['GET', 'POST'])
 def upload_file():
     if request.method == 'POST':
+      mypath = os.getcwd()+'/tmp/'
+      if not os.path.isdir(mypath):
+           os.mkdir(mypath)
       f = request.files['file']
       f.save(os.path.join(app.config['UPLOAD_FOLDER'],f.filename))
       if os.path.exists(os.path.join(app.config['UPLOAD_FOLDER'], f.filename)):
