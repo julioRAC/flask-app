@@ -8,6 +8,7 @@ servers:
 paths:
   /sqrt:
     get:
+      operationId: getSqrt
       summary: Calcula la raíz cuadrada de un número.
       description: Devuelve la raíz cuadrada del número proporcionado como parámetro.
       parameters:
