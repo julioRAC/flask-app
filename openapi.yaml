@@ -1,0 +1,53 @@
+openapi: 3.0.1
+info:
+  title: API de Raíz Cuadrada
+  description: API para calcular la raíz cuadrada de un número.
+  version: 1.0.0
+servers:
+  - url: https://nombre-de-tu-aplicacion.herokuapp.com
+paths:
+  /sqrt:
+    get:
+      summary: Calcula la raíz cuadrada de un número.
+      description: Devuelve la raíz cuadrada del número proporcionado como parámetro.
+      parameters:
+        - name: number
+          in: query
+          required: true
+          schema:
+            type: number
+          description: El número del cual se va a calcular la raíz cuadrada.
+      responses:
+        '200':
+          description: Operación exitosa.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  number:
+                    type: number
+                    description: El número proporcionado.
+                  sqrt:
+                    type: number
+                    description: La raíz cuadrada del número proporcionado.
+        '400':
+          description: Error en la solicitud.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  error:
+                    type: string
+                    description: Descripción del error.
+        '500':
+          description: Error del servidor.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  error:
+                    type: string
+                    description: Descripción del error.
