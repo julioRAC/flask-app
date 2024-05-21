@@ -1,4 +1,4 @@
-
+https://chatgpt.com/g/g-cKXjWStaE-python/c/259ff637-0360-49cb-9061-ec34f38980a1
 
 ### tl;dr 
 
