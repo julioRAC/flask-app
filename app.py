@@ -4,9 +4,9 @@ import os
 
 app = Flask(__name__)
 
-# @app.route('/')
-# def index():
-#    return "Bienvenido a la API de raíz cuadrada. Usa la ruta /sqrt con el parámetro number para obtener la raíz cuadrada de un número. Por ejemplo /sqrt?number=26"
+@app.route('/')
+def index():
+    return "Bienvenido a la API de raíz cuadrada. Usa la ruta /sqrt con el parámetro number para obtener la raíz cuadrada de un número. Por ejemplo /sqrt?number=26"
 
 @app.route('/sqrt', methods=['GET'])
 def get_sqrt():
