@@ -7,6 +7,13 @@ https://flasl-app-9df5558a7111.herokuapp.com/
 ## El link del plugin de ChatGPT es
 https://chatgpt.com/g/g-fXS5BodVt-plugin-prueba-raiz-cuadrada
 
+
+
+
+
+
+
+
 ### tl;dr 
 
 A walkthrough on how to get set up with Heroku and its toolkit and then how to deploy a simple web application (for free) on the Heroku Cloud. 
