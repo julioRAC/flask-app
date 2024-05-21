@@ -1,3 +1,4 @@
+# Este fue el procedimiento que se siguió para crear el API, hospedarlo en Heroku y crear el Plugin
 https://chatgpt.com/g/g-cKXjWStaE-python/c/259ff637-0360-49cb-9061-ec34f38980a1
 
 ### tl;dr 
